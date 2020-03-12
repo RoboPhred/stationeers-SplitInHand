@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SplitInHand
 {
-    [BepInPlugin("net.robophreddev.stationeers.SplitInHand", "Split Stacks in Hand", "1.0.0.0")]
+    [BepInPlugin("net.robophreddev.stationeers.SplitInHand", "Split Stacks in Hand", "1.0.1.0")]
     public class SplitInHandPlugin : BaseUnityPlugin
     {
         public static SplitInHandPlugin Instance;
