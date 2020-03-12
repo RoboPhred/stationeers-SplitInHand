@@ -15,7 +15,6 @@ namespace SplitInHand
     {
         static bool Prefix(Stackable __instance, Interaction interaction, int quantity)
         {
-            SplitInHandPlugin.Instance.Log("Handling SplitStack");
             StackableSplitStackPatch.PatchedSplitStack(__instance, interaction, quantity);
             return false;
         }
@@ -29,8 +28,6 @@ namespace SplitInHand
             if (parent == null)
                 return;
 
-
-            SplitInHandPlugin.Instance.Log("Creating Stack");
 
             Stackable newStack = OnServer.Create(
                 __instance.Prefab as DynamicThing,
@@ -54,18 +51,11 @@ namespace SplitInHand
                 var occupantStackable = destinationSlot.Occupant as Stackable;
                 if (occupantStackable != null && occupantStackable.PrefabHash == newStack.PrefabHash)
                 {
-                    SplitInHandPlugin.Instance.Log("Merging Stack");
-
                     occupantStackable.Merge(newStack);
                 }
                 else if (destinationSlot.Occupant == null)
                 {
-                    SplitInHandPlugin.Instance.Log("Slotting Stack");
                     newStack.MoveToSlot(destinationSlot, newStack, false);
-                }
-                else
-                {
-                    SplitInHandPlugin.Instance.Log("Dropping Stack");
                 }
             }
         }
