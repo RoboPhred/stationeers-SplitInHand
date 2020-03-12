@@ -2,6 +2,10 @@
 
 When splitting items, if the item in your offhand is the same as the item being split, the item will merge into your offhand stack.
 
+# Releases
+
+To download, visit the (Releases)[./releases] page.
+
 # Installation
 
 Requires [BepInEx 5.0.1](https://github.com/BepInEx/BepInEx/releases) or later.
