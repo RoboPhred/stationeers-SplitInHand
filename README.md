@@ -4,7 +4,7 @@ When splitting items, if the item in your offhand is the same as the item being 
 
 # Releases
 
-To download, visit the (Releases)[./releases] page.
+To download, visit the [Releases](./releases) page.
 
 # Installation
 
