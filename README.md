@@ -17,8 +17,8 @@ Requires [BepInEx 5.0.1](https://github.com/BepInEx/BepInEx/releases) or later.
 
 # Multiplayer Support
 
-Splitting stacks is calculated on the server.  Installing this mod and joining a server will have no effect.  If the server has this mod installed, then the mod _should_ work for all clients.
+If this mod is installed on a dedicated server, it will work for all clients.
+If a client has this mod installed and joins the server, the mod will have no effect.
 
-However, in practice, there seems to be a bug with stack splitting for clients connected to a server.  The split stack never enters the other hand of non-host clients.  The server will think the player has the items in each hand, but the player will see the item drop to the ground.  This happens regardless of the mod being installed.
-
-Because of this bug, the mod is effectively useless on servers at the moment.  If this bug is fixed, the mod should function as expected.
+As of version 1.1, this mod also fixes a base game bug where a client attempting to split will see the item drop on the floor even though the server thinks the player has it held
+in their hands. This allows splitting to work properly for clients other than the host.

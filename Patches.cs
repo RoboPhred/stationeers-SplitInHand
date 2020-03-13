@@ -55,7 +55,10 @@ namespace SplitInHand
                 }
                 else if (destinationSlot.Occupant == null)
                 {
-                    newStack.MoveToSlot(destinationSlot, newStack, false);
+                    // Stationeers orignal code:
+                    //newStack.MoveToSlot(destinationSlot, newStack, false);
+                    // Bug fix for clients not seeing stack moves:
+                    OnServer.MoveToSlot(newStack, destinationSlot);
                 }
             }
         }
